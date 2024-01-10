@@ -1,6 +1,6 @@
 const { User } = require('../models');
 
-const userController = {
+module.exports = {
   // Get all users
   getAllUsers(req, res) {
     User.find({})
@@ -46,8 +46,8 @@ const userController = {
   },
 
   // Create a user
-  createUser({ body }, res) {
-    User.create(body)
+  createUser( req, res) {
+    User.create(req.body)
       .then((dbUserData) => res.json(dbUserData))
       .catch((err) => {
         console.error(err);
@@ -87,5 +87,3 @@ const userController = {
       });
   },
 };
-
-module.exports = userController;
