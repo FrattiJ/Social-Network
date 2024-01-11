@@ -9,6 +9,7 @@ This is a social media application with an API that uses a NoSQL database (Mongo
 - [Models](#models)
 - [API Routes](#api-routes)
 - [Controllers](#controllers)
+- [Walkthrough] (#walkthrough)
 - [Questions](#questions)
 
 ## Installation
@@ -72,13 +73,15 @@ This is a social media application with an API that uses a NoSQL database (Mongo
 - **POST:** Create a new user.
 - **PUT /:userId:** Update a user by ID.
 - **DELETE /:userId:** Delete a user by ID.
+- **POST /:userId/friends/:friendId** Add a new friend to a user's friend list
+- **DELETE /:userId/friends/:friendId** Delete a friend from a user's friend list
 
 ### /api/thoughts:
 
 - **GET:** Get all thoughts.
 - **GET /:thoughtId:** Get a single thought by ID.
 - **POST:** Create a new thought.
-- **PUT** /:
+- **PUT /:thoughtId:** Update a thought
 
 ## Controllers
 
@@ -97,6 +100,9 @@ This is a social media application with an API that uses a NoSQL database (Mongo
 - **deleteThought:** Delete a thought by ID.
 - **createReaction:** Create a reaction for a thought.
 - **deleteReaction:** Delete a reaction from a thought.
+
+## Walkthrough
+https://youtu.be/dEBDMOJtwWc
 
 ## Questions
 If you have any questions about this projects, please contact me directly at JacobRFratti@gmail.com. You can view more of my projects at https://github.com/FrattiJ.

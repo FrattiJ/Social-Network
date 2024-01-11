@@ -105,12 +105,14 @@ const thoughtController = {
 
   // Create a reaction for a thought
   createReaction({ params, body }, res) {
+    console.log('Received request to create reaction. Request body:', body);
     Thought.findOneAndUpdate(
       { _id: params.thoughtId },
       { $push: { reactions: body } },
       { new: true, runValidators: true }
     )
       .then((dbThoughtData) => {
+        console.log('Reaction created successfully. Updated thought data:', dbThoughtData);
         if (!dbThoughtData) {
           res.status(404).json({ message: 'No thought found with this id' });
           return;
